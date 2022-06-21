@@ -1,4 +1,4 @@
-package com.practice.Arrays;
+ package com.practice.Arrays;
 
 import java.util.HashMap;
 import java.util.Map;

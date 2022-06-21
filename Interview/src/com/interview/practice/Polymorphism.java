@@ -17,7 +17,7 @@ class Square implements shape{
 class Base {
 
 	public void makeSound() {
-		System.out.println("noise in base");
+		System.out.println("Base|makeSound|noise in base");
 	}
 
 }
@@ -26,14 +26,14 @@ class Child extends Base {
 
 	@Override
 	public void makeSound() {
-		System.out.println("noise in child");
+		System.out.println("Child|makeSound|noise in child");
 	}
 
 }
 
 abstract class Dog {
 	final void bark() {
-		System.out.println("woof");
+		System.out.println("Dog|bark|woof");
 	}
 
 	abstract void jump(); // this is a pure virtual function
@@ -43,23 +43,23 @@ class MyDog extends Dog {
 	
 	void jump() {
 		
-		System.out.println("Jumps in the air");
+		System.out.println("Mydog|jump()|Jumps in the air");
 	}
 }
 
 public class Polymorphism {
 	
 	 public static void main(String args[]) {
-		 
+		 System.out.println("**a.makeSound***");
 		 Base a = new Base();
 		 a.makeSound();
 		 
-		 System.out.println("*****");
+		 System.out.println("**b.makeSound***");
 		 
 		 Base b = new Child();
 		 b.makeSound();
 		 
-		 System.out.println("*****");
+		 System.out.println("***c.makesound**");
 		 
 		 Child c = new Child();
 		 c.makeSound();
